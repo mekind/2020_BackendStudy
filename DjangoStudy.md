@@ -5,6 +5,16 @@
     - [1.1.2 settings.py](#112-settingspy)
     - [1.1.3 urls.py](#113-urlspy)
     - [1.1.4 wsgi.py](#114-wsgipy)
+- [2. 생성한 앱 구조](#2-생성한-앱-구조)
+  - [2.1 __ init __.py](#21-__-init-__py)
+  - [2.2 admin.py](#22-adminpy)
+  - [2.3 apps.py](#23-appspy)
+  - [2.4 test.py](#24-testpy)
+  - [2.5 models.py](#25-modelspy)
+  - [2.6 urls.py](#26-urlspy)
+  - [2.7 views.py](#27-viewspy)
+- [3. 전체적인 과정](#3-전체적인-과정)
+  - [3.1 Response/Request](#31-responserequest)
 
 # 1. 기본 디텍토리 구조 
 
@@ -79,3 +89,56 @@ django가 돌아가기 위한 가장 기본적인 실행을 하는 코드
 
 prod 서버에서 실행될 때 사용하는 웹서버 관련 앱을 생성 
 
+
+# 2. 생성한 앱 구조
+
+## 2.1 __ init __.py
+
+python 코드임을 알리는 상징이랄까..
+
+
+## 2.2 admin.py
+
+admin 페이지 관련하여 수정을 할 때 사용
+
+## 2.3 apps.py 
+
+## 2.4 test.py
+
+## 2.5 models.py
+
+## 2.6 urls.py
+
+```py
+
+# FBV
+
+path('articles/<int:year>/<int:month>/', views.month_archive)
+
+def month_archive(self, month):
+  #something
+
+# CBV 
+
+path('blog/page<int:num>/', views.page)
+
+class
+
+# 정규표현식 (Nested arguments)
+
+re_path(r'^blog/(page-(\d+)/)?$', blog_articles)
+
+path('blog/', include('inner'), {'blog_id': 3}),
+
+```
+
+
+## 2.7 views.py 
+
+
+# 3. 전체적인 과정 
+
+
+## 3.1 Response/Request
+
+[Django Reference](https://docs.djangoproject.com/en/3.1/ref/request-response/#django.http.HttpRequest.urlconf)
